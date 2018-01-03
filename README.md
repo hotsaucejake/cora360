@@ -127,3 +127,105 @@ $cora->fallback(function($bot) {
     $bot->reply('Sorry, I did not understand these commands. Here is a list of commands I understand: ...');
 });
 ```
+
+### Hearing Attachments
+
+#### Introduction
+
+Cora does not only allow you to listen for incoming textual messages, but also gives you the ability to listen for incoming images, videos, audio messages and locations.
+
+#### Listen For Images
+
+Making Cora listen to incoming images is easy. Just use the `receivesImages` method on the Cora instance. All received images will be passed to the callback as a second argument.
+
+The images returned will be an array of `Image` objects.
+
+```php
+use BotMan\BotMan\Messages\Attachments\Image;
+
+$bot->receivesImages(function($bot, $images) {
+
+    foreach ($images as $image) {
+
+        $url = $image->getUrl(); // The direct url
+        $title = $image->getTitle(); // The title, if available
+        $payload = $image->getPayload(); // The original payload
+    }
+});
+```
+
+#### Listen For Videos
+
+Just like images, you can use the `receivesVideos` method on the Cora instance to listen for incoming video file uploads. All received videos will be passed to the callback as a second argument.
+
+The videos returned will be an array of `Video` objects.
+
+```php
+use BotMan\BotMan\Messages\Attachments\Video;
+
+$bot->receivesVideos(function($bot, $videos) {
+
+    foreach ($videos as $video) {
+
+        $url = $video->getUrl(); // The direct url
+        $payload = $video->getPayload(); // The original payload
+    }
+});
+```
+
+#### Listen For Audio
+
+Just like images, you can use the `receivesAudio` method on the Cora instance to listen for incoming audio file uploads. All received audio files will be passed to the callback as a second argument.
+
+The audio files returned will be an array of `Audio` objects.
+
+```php
+use BotMan\BotMan\Messages\Attachments\Audio;
+
+$bot->receivesAudio(function($bot, $audios) {
+
+    foreach ($audios as $audio) {
+
+        $url = $audio->getUrl(); // The direct url
+        $payload = $audio->getPayload(); // The original payload
+    }
+});
+```
+
+#### Listen For Files
+
+Just like images, you can use the `receivesFiles` method on the Cora instance to listen for incoming file uploads. All received files will be passed to the callback as a second argument.
+
+The files returned will be an array of `File` objects.
+
+```php
+use BotMan\BotMan\Messages\Attachments\File;
+
+$bot->receivesFiles(function($bot, $files) {
+
+    foreach ($files as $file) {
+
+        $url = $file->getUrl(); // The direct url
+        $payload = $file->getPayload(); // The original payload
+    }
+});
+```
+
+#### Listen For Locations
+
+Some messaging services also allow Cora users to send their GPS location to your bot. You can listen for these location calls using the  `receivesLocation` method on the Cora instance.
+
+The method will pass a `Location` object to the callback method.
+
+```php
+use BotMan\BotMan\Messages\Attachments\Location;
+
+$bot->receivesLocation(function($bot, Location $location) {
+    $lat = $location->getLatitude();
+    $lng = $location->getLongitude();
+});
+```
+
+#### Supported Drivers
+
+Not all drivers support receiving attachments, or because of the lack of reference API, or because it has not yet been implemented in the driver itself.
