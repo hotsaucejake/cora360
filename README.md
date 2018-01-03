@@ -13,6 +13,14 @@ Chatbot Server for Corus360
          * [Middleware](#middleware)
          * [Recipients](#recipients)
       * [Fallbacks](#fallbacks)
+   * [Hearing Attachments](#hearing-attachments)
+      * [Introduction](#introduction)
+      * [Listen for Images](#listen-for-images)
+      * [Listen for Videos](#listen-for-videos)
+      * [Listen for Audio](#listen-for-audio)
+      * [Listen for Files](#listen-for-files)
+      * [Listen for Locations](#listen-for-locations)
+      * [Supported Drivers](#supported-drivers)
 
 
 ## Core Concepts
@@ -128,6 +136,8 @@ $cora->fallback(function($bot) {
 });
 ```
 
+---
+
 ### Hearing Attachments
 
 #### Introduction
@@ -229,3 +239,93 @@ $bot->receivesLocation(function($bot, Location $location) {
 #### Supported Drivers
 
 Not all drivers support receiving attachments, or because of the lack of reference API, or because it has not yet been implemented in the driver itself.
+
+---
+
+### Sending Messages
+
+---
+
+### Conversations
+
+---
+
+### Events
+
+---
+
+## Advanced Topics
+
+### Natural Language
+
+---
+
+### Processing
+
+---
+
+### User Information
+
+---
+
+### Storing Information
+
+---
+
+## Extending Cora
+
+### Middleware
+
+---
+
+## Drivers
+
+### Amazon Alexa
+
+---
+
+### Cisco Spark
+
+--- 
+
+### Facebook Messenger
+
+---
+
+### HipChat
+
+---
+
+### Microsoft Bot Framework
+
+---
+
+### Nexmo
+
+---
+
+### Slack
+
+---
+
+### Telegram
+
+---
+
+### Twilio
+
+---
+
+### Web
+
+---
+
+### WeChat
+
+---
+
+## Testing
+
+---
+
+## FAQs
