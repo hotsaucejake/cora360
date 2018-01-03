@@ -2,6 +2,18 @@
 
 Chatbot Server for Corus360 
 
+## Table of Contents
+* [Core Concepts](#core-concepts)
+   * [Hearing Messages](#hearing-messages)
+      * [Basic Commands](#basic-commands)
+      * [Command Parameters](#command-parameters)
+      * [Matching Regular Expressions](#matching-regular-expressions)
+      * [Command Groups](#command-groups)
+         * [Drivers](#drivers)
+         * [Middleware](#middleware)
+         * [Recipients](#recipients)
+      * [Fallbacks](#fallbacks)
+
 
 ## Core Concepts
 
