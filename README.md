@@ -1,6 +1,7 @@
-# cora
+# Cora
+
 Chatbot Server for Corus360 
-===
+
 
 ## Table of Contents
 
