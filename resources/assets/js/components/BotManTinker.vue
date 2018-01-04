@@ -17,12 +17,13 @@
         width: 300px;
         height: 25px;
         border-radius: 5px;
-        border: none;
+        border: 2px solid #b5121b;
         padding: 10px;
     }
 
     ul.ChatLog {
         list-style: none;
+        padding: 0;
     }
 
     .ChatLog {
@@ -72,7 +73,7 @@
         height: 0;
         content: '';
         border: 6px solid transparent;
-        border-right-color: #ddd;
+        border-right-color: #b5121b;
         z-index: 2;
     }
 
@@ -81,21 +82,22 @@
         bottom: .6em;
         left: auto;
         border: 6px solid transparent;
-        border-left-color: #08f;
+        border-left-color: #666;
     }
 
     .ChatLog__message {
-        background-color: #ddd;
+        background-color: #b5121b;
         padding: .5em;
         border-radius: 4px;
         font-weight: lighter;
         max-width: 70%;
+        color: #fff;
     }
 
     .ChatLog__entry.ChatLog__entry_mine .ChatLog__message {
-        border-top: 1px solid #07f;
-        border-bottom: 1px solid #07f;
-        background-color: #08f;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+        background-color: #666;
         color: #fff;
     }
 </style>

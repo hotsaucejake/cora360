@@ -16,7 +16,7 @@
             font-family: "Source Sans Pro", sans-serif;
             margin: 0;
             padding: 0;
-            background: radial-gradient(#57bfc7, #45a6b3);
+            background: radial-gradient(#fff, #f99);
         }
 
         .container {
